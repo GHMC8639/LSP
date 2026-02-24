@@ -4,8 +4,7 @@ from core.validators import (
     validate_mobile_number,
     validate_otp,
     validate_device_id,
-    validate_password,
-    validate_username
+    
 )
 
 # ================= SEND OTP =================
