@@ -1,3 +1,5 @@
+
+from datetime import datetime
 from sqlalchemy import  Column, BigInteger,String, Text
 from core.database import Base
 
@@ -12,6 +14,7 @@ class User(Base):
     password_hash = Column(String)
     device_id = Column(Text,nullable=True)
     role = Column(String,default="USER")
+    Created_at = Column(String, default=datetime.utcnow)
     
    
     

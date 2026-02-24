@@ -5,7 +5,7 @@ class UserCreateSchema(BaseModel):
     mobile_number: str
     password: str
     username: str
-    email:EmailStr
+    
 
 class UserResponseSchema(BaseModel):
     id: int

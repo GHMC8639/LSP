@@ -9,7 +9,7 @@ from services.superadminservices import super_admin_required, lender_required
 from core.security import hash_password,validate_mobile,validate_password_length
 from core.dependencies import get_current_user
 
-router = APIRouter(tags=["SuperAdmin-Lenders createdits-deleted"], prefix="/lenders")
+router = APIRouter(tags=["SuperAdmin-Lenders"], prefix="/lenders")
 
 
 # ======================================================

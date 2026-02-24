@@ -137,21 +137,3 @@ def resend_otp(mobile_number: str):
             MAX_RESEND_ATTEMPTS - (resend_attempts + 1)
     }
 
-# otp_service.py
-
-# =========================
-# ADD OTP TO REDIS  
-# =========================
-
-def add_otp(phone_number: str, ttl_seconds: int = 300):
-    otp = str(random.randint(100000, 999999))
-    key = f"otp:meta:{phone_number}"
-
-    redis_client.hset(key, mapping={
-        "otp": otp,
-        "attempts": 0,
-        "resend_attempts": 0
-    })
-
-    redis_client.expire(key, ttl_seconds)
-    return otp
